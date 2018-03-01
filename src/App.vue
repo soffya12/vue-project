@@ -6,6 +6,10 @@
     <mt-button icon="back">返回</mt-button>
     </router-link>
     </mt-header>
+
+    <!-- 内容: 路由出口 -->
+    <router-view></router-view>
+
     <!-- 底部 -->
     <nav class="mui-bar mui-bar-tab">
 			<a class="mui-tab-item mui-active" href="#tabbar">

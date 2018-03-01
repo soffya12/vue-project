@@ -13,6 +13,8 @@ module.exports = {
     port: 4000
   },
 
+  devtool: 'eval-source-map',
+
   module: {
     rules: [
       {test: /\.css$/, use: ['style-loader', 'css-loader']},
