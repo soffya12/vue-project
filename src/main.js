@@ -3,6 +3,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import './assets/css/index.css'
 import VueRouter from 'vue-router'
+
+import './lib/mui/css/mui.css'
+import './lib/mui/css/icons-extra.css'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
