@@ -5,16 +5,18 @@ import './assets/css/index.css'
 
 import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
+// import './lib/mui/js/mui.js'
 
 
 
 
 
-import { Header,Button,Swipe, SwipeItem  } from 'mint-ui';
+import { Header,Button,Swipe, SwipeItem,Lazyload   } from 'mint-ui';
 Vue.component(Header.name, Header);
 Vue.component(Button.name, Button);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+Vue.use(Lazyload);
 
 import axios from 'axios'
 Vue.prototype.$http = axios;
