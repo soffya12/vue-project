@@ -8,7 +8,7 @@ import Search from '../components/search/Search.vue'
 import NewsList from '../components/news/List.vue'
 import NewsInfo from '../components/news/Info.vue'
 import PhotoList from '../components/photos/List.vue'
-
+import PhotoInfo from '../components/photos/Info.vue'
 
 const router = new VueRouter({
   routes: [
@@ -20,6 +20,7 @@ const router = new VueRouter({
     {path: '/home/newslist', component: NewsList},
     {path: '/home/newsinfo/:id', component: NewsInfo},
     {path: '/home/photolist', component: PhotoList},
+    {path: '/home/photoinfo/:id', component: PhotoInfo, name: 'photoinfo'},
 
   ],
   linkActiveClass: 'mui-active'

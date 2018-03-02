@@ -12,7 +12,7 @@
 
 		<!-- 图片列表 -->
 		<ul class="category-img-list">
-      <li class="img-list-item" v-for="item in imagesList" :key="item.id">
+      <li class="img-list-item" v-for="item in imagesList" :key="item.id" @click="goInfo(item.id)">
         <img v-lazy="item.img_url"> 
         <div>
           <h2>{{item.title}}</h2>
@@ -58,6 +58,9 @@ export default {
           this.imagesList = res.data.message
         }
       })
+    },
+    goInfo(id) {
+      this.$router.push({name: 'photoinfo', params: {id}})
     }
   }
 };

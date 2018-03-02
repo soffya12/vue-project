@@ -5,10 +5,6 @@ import './assets/css/index.css'
 
 import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
-// import './lib/mui/js/mui.js'
-
-
-
 
 
 import { Header,Button,Swipe, SwipeItem,Lazyload   } from 'mint-ui';
