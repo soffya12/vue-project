@@ -6,6 +6,7 @@ import './assets/css/index.css'
 import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
 
+import store from './store'
 
 import { Header,Button,Swipe, SwipeItem,Lazyload   } from 'mint-ui';
 Vue.component(Header.name, Header);
@@ -23,5 +24,6 @@ import router from './router'
 new Vue({
   el: '#app',
   router,
+  store,
   render: c => c(App)
 })
