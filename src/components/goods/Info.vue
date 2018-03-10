@@ -70,6 +70,7 @@ export default {
   created() {
     this.getGoodsInfoById();
     this.getGoodsImgs();
+    
   },
   data() {
     return {
@@ -85,7 +86,6 @@ export default {
       .then(res => {
         if (res.data.status === 0) {
           this.info = res.data.message[0];
-          // this.isShow = true
         }
         
     })

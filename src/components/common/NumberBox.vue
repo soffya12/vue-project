@@ -1,7 +1,7 @@
 <template>
   <div class="num-box">
     <button type="button" class="num-btn num-btn-minus" @click="minus">-</button> 
-    <input type="number" class="num-input-numbox" v-model="count"> 
+    <input type="number" class="num-input-numbox" v-model="count" @keyup="rand"> 
     <button type="button" class="num-btn num-btn-plus" @click="plus">+</button>
   </div>
 </template>
@@ -21,6 +21,15 @@ export default {
         return
       }
       this.count--
+      this.$emit('input', this.count);
+    },
+
+    rand() {
+      if (this.count < 1) {
+        this.count = 1
+      }else if(this.count > this.max) {
+        this.count = this.max
+      }
       this.$emit('input', this.count);
     },
 

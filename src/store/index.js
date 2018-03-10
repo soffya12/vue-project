@@ -18,6 +18,18 @@ const store = new Vuex.Store({
         curGoods.count += payload.count
       }
       localStorage.setItem('cart', JSON.stringify(state.cart))
+    },
+
+    updateCart(state, payload) {
+      state.cart = payload.map(item => {
+        if (item.isChecked) {
+          return { id: item.id, count: item.count}
+        }else {
+          return { id: item.id, count: 0}
+        }
+      })
+      localStorage.setItem('cart', JSON.stringify(state.cart))
+      
     }
 
   },
@@ -25,9 +37,19 @@ const store = new Vuex.Store({
   getters: {
     getCartCount(state) {
       let count = 0;
-      state.cart.forEach(item => count += item.count)
+      state.cart.forEach(item => count += +item.count)
       return count
-    }
+    },
+    getIds(state) {
+      return state.cart.map(item => item.id).join(',')
+    },
+    getCountById(state) {
+      const idsObj = {}
+      state.cart.forEach(item => {
+        idsObj[item.id] = item.count
+      })
+      return idsObj
+    },
   },
 
   actions: {

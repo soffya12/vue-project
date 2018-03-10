@@ -20,7 +20,7 @@ module.exports = {
       {test: /\.css$/, use: ['style-loader', 'css-loader']},
       {test: /\.(sass|scss)$/, use: ['style-loader', 'css-loader', 'sass-loader']},
       {test: /\.(png|jpg|jpeg|gif)$/, use: 'url-loader'},
-      {test: /\.(woff|woff2|eot|svg|ttf|otf)$/, use: 'url-loader'},
+      {test: /\.(eot|woff|woff2|ttf|svg|otf)$/, use: 'url-loader'},
       {test: /\.js$/, use: 'babel-loader', exclude: /node_modules|mui/},
       {test: /\.vue$/, use: 'vue-loader'},
     ]

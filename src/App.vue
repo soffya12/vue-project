@@ -2,9 +2,9 @@
   <div class="container">
     <!-- 顶部 -->
     <mt-header fixed title="黑马程序员 | SH17">
-    <router-link to="/" slot="left">
-    <mt-button icon="back">返回</mt-button>
-    </router-link>
+    <a href="#" @click.prevent="$router.go(-1)" slot="left" v-show="$route.path !== '/home'">
+    	<mt-button icon="back">返回</mt-button>
+    </a>
     </mt-header>
 
     <!-- 内容: 路由出口 -->

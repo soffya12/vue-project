@@ -64,7 +64,7 @@
 
     methods: {
       getLunbo() {
-        this.$http.get('http://vue.studyit.io/api/getlunbo')
+        this.$http.get('api/getlunbo')
           .then(res => {
             const data = res.data
             if (data.status === 0) {
